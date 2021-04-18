@@ -1,0 +1,60 @@
+{
+    "name": "qwitter",
+    "version": "0.0.1",
+    "description": "A Quasar Framework app",
+    "productName": "Qwitter",
+    "author": "Łukasz Brzozowski <l.brzozowski@i-bs.pl>",
+    "cordovaId": "org.cordova.quasar.app",
+    "private": true,
+    "scripts": {
+        "lint": "eslint --ext .js,.vue ./",
+        "test": "echo \"No test specified\" && exit 0",
+        "dev": "quasar dev",
+        "sign-apk": "jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore my-release-key.keystore dist/capacitor/android/apk/release/app-release-unsigned.apk alias_name",
+        "build-android": "quasar build -m cordova -T android",
+        "serve-android": "quasar dev -m cordova -T android --device"
+    },
+    "dependencies": {
+        "@capacitor/core": "^2.4.7",
+        "@quasar/extras": "^1.0.0",
+        "@vuex-orm/core": "^0.36.3",
+        "cordova": "^10.0.0",
+        "core-js": "^3.6.5",
+        "date-fns": "^2.19.0",
+        "firebase": "^8.3.1",
+        "quasar": "^1.0.0",
+        "uuidv4": "^6.2.7",
+        "vue-intersection-observer": "^0.1.7",
+        "vuex": "^3.6.2",
+        "vuex-orm-plugin-date-attribute": "^0.1.1"
+    },
+    "devDependencies": {
+        "@quasar/app": "^2.0.0",
+        "babel-eslint": "^10.0.1",
+        "devtron": "^1.4.0",
+        "electron": "^9.0.0",
+        "electron-debug": "^3.0.1",
+        "electron-devtools-installer": "^3.0.0",
+        "eslint": "^7.21.0",
+        "eslint-config-prettier": "^8.1.0",
+        "eslint-plugin-vue": "^7.7.0",
+        "eslint-webpack-plugin": "^2.4.0",
+        "standard": "^16.0.3"
+    },
+    "browserslist": [
+        "last 10 Chrome versions",
+        "last 10 Firefox versions",
+        "last 4 Edge versions",
+        "last 7 Safari versions",
+        "last 8 Android versions",
+        "last 8 ChromeAndroid versions",
+        "last 8 FirefoxAndroid versions",
+        "last 10 iOS versions",
+        "last 5 Opera versions"
+    ],
+    "engines": {
+        "node": ">= 10.18.1",
+        "npm": ">= 6.13.4",
+        "yarn": ">= 1.21.1"
+    }
+}
